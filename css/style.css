@@ -7239,6 +7239,15 @@ img {
   text-align: center;
   max-height: 200px;
 }
+.footer-link {
+  color: white;
+  display: block;
+  margin: 0 0 30px;
+}
+.footer-link:hover {
+  color: white;
+  text-decoration: underline;
+}
 /* ------------------------------------------------------------ *\
 	Autocomplete
 \* ------------------------------------------------------------ */

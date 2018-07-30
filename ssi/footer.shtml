@@ -3,6 +3,7 @@
 			<a class="footer-logo" href="#">
 				<img src="css/images/logo-dark.jpg" alt="" width="120" height="120">
 			</a>
+      <a class="footer-link" href="https://fanhub.trainsplit.com/contact.aspx" target="_">Contact</a>
 		</div>
 	</footer><!-- /.footer -->
 </div><!-- /.wrapper -->
