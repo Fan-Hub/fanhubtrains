@@ -21,7 +21,7 @@ function getParameterByName(name) {
 function populateFields () {
   var originStation = getParameterByName('from');
   var destinationStation = getParameterByName('to');
-  var outwardDate = getParameterByName('depart');
+  var outwardDate = getParameterByName('depart') || null;
   var returnDate = getParameterByName('return');
   var outwardTime = getParameterByName('departTime');
   var returnTime = getParameterByName('returnTime');
@@ -35,10 +35,13 @@ function populateFields () {
   setTimeout(function () {
     $('#field-from').val(originStation);
     $('#field-to').val(destinationStation);
-    $('#field-outward').val(outwardDate);
-    $('#field-return').val(returnDate);
-    $('#field-departure-time').val(outwardTime);
-    $('#field-return-time').val(returnTime);
+
+    $('#field-outward').datepicker('setDate', outwardDate);
+    $('#field-return').datepicker('setDate', returnDate);
+    $('.ui-datepicker-calendar .ui-state-active').click();
+
+    $('#field-departure-time').find('option[value="' + outwardTime + '"]').prop('selected', 'selected')
+    $('#field-return-time').find('option[value="' + returnTime + '"]').prop('selected', 'selected')
   }, 0);
 }
 
