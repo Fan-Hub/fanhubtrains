@@ -7244,7 +7244,9 @@ img {
   display: block;
   margin: 0 0 30px;
 }
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus,
+.footer-link:active {
   color: white;
   text-decoration: underline;
 }
